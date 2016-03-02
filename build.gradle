@@ -1,0 +1,23 @@
+group 'andreyko'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'scala'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2+'
+}
+
+sourceSets.main{
+    output.resourcesDir = '.out/resources'
+    output.classesDir   = '.out/classes'
+    scala{
+        srcDirs = ['./src']
+    }
+}
+
