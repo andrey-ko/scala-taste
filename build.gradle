@@ -4,7 +4,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'scala'
 
 sourceCompatibility = 1.8
-
+buildDir = '.out'
 repositories {
     mavenCentral()
 }
@@ -14,10 +14,7 @@ dependencies {
 }
 
 sourceSets.main{
-    output.resourcesDir = '.out/resources'
-    output.classesDir   = '.out/classes'
-    scala{
-        srcDirs = ['./src']
-    }
+    scala.srcDirs = ['./src']
+    resources.srcDirs = ['.res']
 }
 
